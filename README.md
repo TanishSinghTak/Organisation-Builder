@@ -35,7 +35,14 @@ We have also implemented various methods which we use to build our organization 
   * **hireOwner** : Method to set the owner of the organization.
   * **hireEmployee** : Method to hire an employee with a given ID under an already existing employee of the organization. We have used the algorithm of inserting a node in an AVL tree through various rotations if unbalancing occurs to insert the new employee node. We also update the generic tree by updating the **employees** list of the given boss ID.
   *  **fireEmployee** : We have implemented two versions for this method. In first one we can only fire employees who don't have any employees working under them. In second version we have to transfer all the employees working under the employee that we need to fire to another employee whose ID will be given. We have used the algorithm of deleting a node in an AVL tree through various rotations if unbalancing occurs, to delete the employee node. We also update the generic tree by updating the **employees** list of required nodes.
-  *  
+  *  **boss** : Method to find the boss of a given ID of an employee. We used the normal binary search method in an AVL tree to find the employee with the given ID and get it's boss.
+  *  **lowestCommonBoss** : Method to find the common boss of given two ID's with the highest level amongst them. 
+  *  **subtree** : Method for putting the subtree rooted at the given node in a stack (According to AVL tree).
+  *  **maxlevel** : Method to find the max level in an array of the given node.
+  *  **countSortlevel** : Method to sort an array of nodes according to their levels using count sort algorithm.
+  *  **countSortID** : Method to count sort an array of nodes according to the digits of the ID's of nodes so that we can use this count sort in radix sort.
+  *  **radixSort** : Method to sort an array of nodes according to their ID's using radix sort algorithm.
+  *  **toString** : Returns the whole organization rooted at given ID in a String format. The return string contains the employees (ids) level-wise. So, first the input id (root) will appear, then all employees reporting directly under that id, and then all employees directly under these employee ids and so on. Among employees at the same level, the ID's are sorted in an increasing order of the ID's. We have used different methods given above to implement this. First of all we have taken the list of nodes rooted on the given node using subtree and then applied the radix sort and countSortlevel in order to get the final string in an efficient way.
 
-
-
+## Conclusion
+From all these methods and classes we can store the list of the employees working in an organization and update it easily in an efficient way because we have used the combination of an AVL tree with a Generic tree(N-array tree). From this we can easily implement our methods like hiring and firing an employee in O(logn) time complexity which is very efficient than the case if we only use generic tree to store the list which might take O(n) time or greater than this. 
