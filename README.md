@@ -17,8 +17,4 @@ The other details that we store for an employee related to the AVL tree:
 * **Height**: height of the employee node in AVL tree.
 * **Balance Factor**: Balance Factor of the employee node in AVL tree.
 
-here is only 1 person at level 1, but there can be several employees at level i > 1. Each level i employee works under
-a level i-1 employee, which is his/her immediate boss. Given an employee A, we can form a sequence of employees
-A',A'', A''', ... where A works under A', A' works under A'', and so on. We say that each employee in the sequence
-A',A'', A''',... is a boss of A. You can assume that the employee ids support the ‘<’, ‘>’ and ‘==’ operations over them.
-We would like to implement a suitable tree-based data-structure so that we can implement the following operations :
+Only one individual is at level 1 (Owner of the company), however numerous employees can be at level i > 1. Each level i employee reports to a level i-1 employee, who is his or her immediate boss. We can create a chain of employees A', A", A"',... from an employee A, where A works under A', A' works under A", and so on. Each employee in the series A', A", A"',... can be referred to as a boss of A.
